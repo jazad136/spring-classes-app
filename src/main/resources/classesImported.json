@@ -12,7 +12,25 @@
 				"Mid-semester we cover dynamic programming algorithms such as Longest Common Subsequence, Activity Scheduling",
 				"Finally we cover graph algorithms such as Dijkstra's and Kruskal's MST",
 				"We presented interactive powerpoint presentations that walk through each step of the process"
-			]
+			],
+			"syllabusLinks": [
+				{
+				"link": "2021_SENG2000.pdf",
+				"offeringSeason": "Fall",
+				"offeringYear": "2020"
+				},
+				{
+				"link": "2020_SENG2000.pdf",
+				"offeringSeason": "Spring",
+				"offeringYear": "2021"
+				}
+			], 
+			"statistics": 
+			{
+				"rosterSize": 6,
+				"dropped": 0,
+				"semesterHours": 3
+			}
 		},
 		{
 			"entryId": "2",
@@ -24,7 +42,13 @@
 				"We explore the fundamental building blocks of programs, including goals, inputs, outputs, and constraints",
 				"We explore Finite State Machines, abstractions of light processes demonstrating input and output of computers",
 				"We explore UML diagrams, abstractions of Java classes and members that help programmers visualize code structure"
-			]
+			],
+			"statistics": 
+			{ 
+				"rosterSize": 0,
+				"dropped": 1,
+				"semesterHours": 3
+			}
 		}
 		
 	]
