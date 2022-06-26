@@ -1,0 +1,19 @@
+<html xmlns:th="https://wwww.thymeleaf.org">
+<head>
+	<title>Classes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link th:href="@{/styles/cssandjs/semantic.min.css}" rel="stylesheet"/>
+</head>
+<body>
+	<h2>Classes</h2>
+	<table>
+		<tr>
+			<th>Name</th><th>Entry ID</th><th>Description 1</th>
+		</tr>
+		<tr th:each="class:${classes}">
+			<td th:text="${class.classesName}">Class Name</td>
+			<td th:text="${class.entryId}">Class Entry ID</td>
+			<td th:text="${class.descriptions[0]}">Class Description</td>
+		</tr>
+	</table>
+</body>
