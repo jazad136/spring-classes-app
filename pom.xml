@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jsaddlercs</groupId>
-	<artifactId>classapp</artifactId>
+	<artifactId>classesapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>classapp</name>
+	<name>classesapp</name>
 	<description>Class App</description>
 	<properties>
 		<java.version>11</java.version>
