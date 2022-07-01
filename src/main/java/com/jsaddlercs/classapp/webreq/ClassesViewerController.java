@@ -1,17 +1,19 @@
-package com.jsaddlercs.classapp;
+package com.jsaddlercs.classapp.webreq;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.jsaddlercs.classapp.ClassesService;
+
 @Controller
 @RequestMapping()
-public class ClassesController {
+public class ClassesViewerController {
 	
 	private final ClassesService classesService;
 	
-	public ClassesController(ClassesService service) { this.classesService = service; } 
+	public ClassesViewerController(ClassesService service) { this.classesService = service; } 
 	
 	
 	@GetMapping 

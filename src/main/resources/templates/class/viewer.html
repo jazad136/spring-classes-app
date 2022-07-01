@@ -5,8 +5,11 @@
 	<link th:href="@{/styles/cssandjs/semantic.min.css}" rel="stylesheet"/>
 </head>
 <body>
+<div class="ui container">
 	<h2>Classes</h2>
-	<table>
+	<div class="ui grid">
+	<div class="ui twelve wide column">
+	<table class="ui table celled">
 		<tr>
 			<th>Name</th><th>Entry ID</th><th>Description 1</th>
 		</tr>
@@ -16,4 +19,25 @@
 			<td th:text="${class.descriptions[0]}">Class Description</td>
 		</tr>
 	</table>
+	<h3>Syllabus Links</h3>
+	<table class="ui table celled">
+		<tr>
+			<th>Name</th><th>Description 1</th><th>Syllabus Link 1</th>
+		</tr>
+		<tr th:each="class:${classes}">
+			<td th:text="${class.classesName}">Class Name</td>
+			<td th:text="${class.entryId}">Description 1</td>
+			<td>
+				<div th:each="syl: ${class.syllabusLinks}" th:with="syllabusLink=${syl.link}">
+					<a th:text="${syl.link}" th:href="'@{/syllabus/}' + ${syl.link}">Syllabus Link</a>
+				</div>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div class="ui four wide column">
+		Logo goes here. 
+	</div>
+	</div>
+</div>
 </body>
