@@ -1,12 +1,9 @@
-package com.jsaddlercs.classapp;
+package com.jsaddlercs.classapp.model;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import com.jsaddlercs.classapp.model.StatisticsType;
-import com.jsaddlercs.classapp.model.SyllabusLink;
 
 @Document
 public class ClassesModel {
