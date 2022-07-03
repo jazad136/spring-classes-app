@@ -18,6 +18,12 @@ public class SyllabusLink {
 
 	public String getOfferingYear() { return offeringYear; }
 
+	public Integer getIntegerOfferingYear() { 
+		if(offeringYear == null)
+			return null;
+		else 
+			return Integer.parseInt(offeringYear);
+	}
 	public void setOfferingYear(String offeringYear) { this.offeringYear = offeringYear; } 
 	
 	
