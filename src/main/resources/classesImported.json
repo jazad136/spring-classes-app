@@ -13,6 +13,9 @@
 				"Finally we cover graph algorithms such as Dijkstra's and Kruskal's MST",
 				"We presented interactive powerpoint presentations that walk through each step of the process"
 			],
+			"images": [
+				"index-images/algos-rslide.png"
+			],
 			"syllabusLinks": [
 				{
 				"link": "2021_SENG2000.pdf",
@@ -43,13 +46,16 @@
 				"We explore Finite State Machines, abstractions of light processes demonstrating input and output of computers",
 				"We explore UML diagrams, abstractions of Java classes and members that help programmers visualize code structure"
 			],
+			"images": [
+				"index-images/sfounds-rslide.png"
+			],
 			"syllabusLinks": [
 				{
 				"link": "2020_SENG1000.pdf",
 				"offeringSeason": "Fall",
 				"offeringYear": "2020"
 				}
-			],
+			], 
 			"statistics": 
 			{ 
 				"rosterSize": 0,
@@ -57,6 +63,7 @@
 				"semesterHours": 3
 			}
 		}
+
 		
 	]
 	
