@@ -4,7 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -83,7 +82,6 @@ class TestClassesRestController {
 		assertThat(cm1.getClassesName()).contains("SENG 2000");
 	}
 	
-	@Disabled
 	@ParameterizedTest
 	@CsvSource({"2020"})
 	public void testClasses_goodYear_containsOutput(String year) { 
