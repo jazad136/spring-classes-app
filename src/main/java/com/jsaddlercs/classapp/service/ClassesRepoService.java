@@ -24,6 +24,7 @@ public class ClassesRepoService {
 		if(year == null || year.isBlank()) { 
 			throw new CLAParamNotExistsException("Year parameter was not passed.");
 		}
+		
 		return Integer.parseInt(year);
 	}
 	
@@ -33,7 +34,7 @@ public class ClassesRepoService {
 		classesLoop:
 		for(ClassesModel cls : classesRepo.findAll()) { 
 			for(SyllabusLink sl : cls.getSyllabusLinks()) { 
-				if(sl.getIntegerOfferingYear() == check) {
+				if(sl.getIntegerOfferingYear().equals(check)) {
 					out.add(cls);
 					continue classesLoop;
 				}
