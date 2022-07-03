@@ -1,4 +1,4 @@
-package com.jsaddlercs.classapp.webreq;
+package com.jsaddlercs.classapp.webrequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
