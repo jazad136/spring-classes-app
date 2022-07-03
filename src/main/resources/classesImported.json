@@ -43,6 +43,13 @@
 				"We explore Finite State Machines, abstractions of light processes demonstrating input and output of computers",
 				"We explore UML diagrams, abstractions of Java classes and members that help programmers visualize code structure"
 			],
+			"syllabusLinks": [
+				{
+				"link": "2020_SENG1000.pdf",
+				"offeringSeason": "Fall",
+				"offeringYear": "2020"
+				}
+			],
 			"statistics": 
 			{ 
 				"rosterSize": 0,
