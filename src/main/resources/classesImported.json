@@ -62,8 +62,58 @@
 				"dropped": 1,
 				"semesterHours": 3
 			}
+		},
+		{
+			"entryId": "3",
+			"classesName": "SENG 5005",
+			"descriptions": [
+				"Discrete Structures",
+				"We construct truth tables and decide matters of logic by combining variables of propositions through various operators.",
+				"We explore commonly found collections in computing, and explore how we combine them through well-defined set Cartesian product, union and intersection operations.",
+				"We cover proving logical statements valid by contradiction, contrapositive, and direct proposition, and work out how to solve logical equivalencies step-by-step in class."
+			],
+			"images": [
+				"index-images/distructs-rslide.png",
+				"dis-images/dis-snap_BooleanLogic.png",
+				"dis-images/dis-snap_Sets.png",
+				"dis-images/dis-snap_Proofs.png"
+			],
+			"syllabusLinks": [
+				{
+				"link": "2020_SENG5005.pdf",
+				"offeringSeason": "Fall",
+				"offeringYear": "2020"
+				}
+			],
+			"statistics": 
+			{
+				"rosterSize": 8,
+				"dropped": -1,
+				"semesterHours": 4	
+			}	
+		},
+		{
+			"entryId": "4",
+			"classesName": "SENG 1020",
+			"descriptions": [
+				"Data Structures for Software Engineers",
+				"For each data structure, we define its key attributes, and compare how to use provided library support for languages relevant to the course offering",
+				"We uncover how the Python language incorporates the ability to override procedures, and useful cases for doing so",
+				"We discuss terminology commonly invoked when building object oriented software"
+			],
+			"images": [
+				"index-images/dastructs-rslide.png",
+				"das-images/das-snap_DictImpls.png",
+				"das-images/das-colored_ClassDef.png",
+				"das-images/das-snap-TalkObjects"
+			],
+			"statistics":
+			{
+				"rosterSize": 7,
+				"dropped": 0,
+				"semesterHours": 3
+			}
 		}
-
 		
 	]
 	
