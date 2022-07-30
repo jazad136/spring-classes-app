@@ -1,6 +1,7 @@
 #SADDLER
 old/
 zips/
+tmpdir/
 
 #STANDARD
 HELP.md

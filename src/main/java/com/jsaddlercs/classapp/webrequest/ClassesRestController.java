@@ -1,6 +1,7 @@
 package com.jsaddlercs.classapp.webrequest;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import com.jsaddlercs.classapp.service.ClassesRepoService;
 
 @RestController
 @RequestMapping(path="/api")
+@CrossOrigin
 public class ClassesRestController {
 	
 	private final ClassesRepoService classesService;

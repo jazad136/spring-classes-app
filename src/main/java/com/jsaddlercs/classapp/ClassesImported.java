@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jsaddlercs.classapp.db.Repository;
+import com.jsaddlercs.classapp.db.ClassesRepository;
 import com.jsaddlercs.classapp.model.ClassesModel;
 
 
@@ -26,7 +26,7 @@ public class ClassesImported {
 	
 	public List<ClassesModel> readClasses;
 	
-	public ClassesImported(Environment env, Repository classesRepository) { 
+	public ClassesImported(Environment env, ClassesRepository classesRepository) { 
 		String prop = env.getProperty("cap.importFile", "");
 		ClassesFromFile cff;
 		if(prop.isBlank()) 
