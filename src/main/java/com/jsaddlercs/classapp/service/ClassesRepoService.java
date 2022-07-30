@@ -5,16 +5,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.jsaddlercs.classapp.db.Repository;
+import com.jsaddlercs.classapp.db.ClassesRepository;
 import com.jsaddlercs.classapp.exception.CLAException;
 import com.jsaddlercs.classapp.model.ClassesModel;
 import com.jsaddlercs.classapp.model.SyllabusLink;
 
 @Service
 public class ClassesRepoService {
-	public Repository classesRepo;
+	public ClassesRepository classesRepo;
 	
-	public ClassesRepoService(Repository classesRepo) { 
+	public ClassesRepoService(ClassesRepository classesRepo) { 
 		this.classesRepo = classesRepo;
 	}
 	public List<ClassesModel> getAllClasses() { 
