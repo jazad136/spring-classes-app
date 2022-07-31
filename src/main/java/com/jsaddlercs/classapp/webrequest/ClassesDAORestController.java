@@ -11,18 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.jsaddlercs.classapp.response.ClassesResponse;
 import com.jsaddlercs.classapp.response.PingResponse;
-import com.jsaddlercs.classapp.service.ClassesRepoService;
+import com.jsaddlercs.classapp.service.ClassesDAOService;
 
-@Profile({"dev","repo"})
+@Profile({"dao"})
 @RestController
-@RequestMapping(path="/api")
+@RequestMapping(path="/api/v2")
 @CrossOrigin
-public class ClassesRestController {
+public class ClassesDAORestController {
 	
-	private final ClassesRepoService classesService;
+	private final ClassesDAOService classesService;
 	
-	public ClassesRestController(ClassesRepoService service) { this.classesService = service; } 
-	
+	public ClassesDAORestController(ClassesDAOService service) { this.classesService = service; } 
 	
 	@GetMapping(path="/ping")
 	@ResponseStatus(HttpStatus.OK)
@@ -35,11 +34,11 @@ public class ClassesRestController {
 		return new ClassesResponse(classesService.getAllClasses());
 	}
 	
-	@GetMapping("/classes/byYear/{year}")
-	public ClassesResponse getClassesByYear(@PathVariable String year) { 
-		Integer check = classesService.checkYearInput(year);
-		return new ClassesResponse(classesService.getClassesByYear(check));
-	}
+//	@GetMapping("/classes/byYear/{year}")
+//	public ClassesResponse getClassesByYear(@PathVariable String year) { 
+//		Integer check = classesService.checkYearInput(year);
+//		return new ClassesResponse(classesService.getClassesByYear(check));
+//	}
 	
 	@GetMapping("/classes/SENG2000")
 	public ClassesResponse getSENG2000Classes() { 

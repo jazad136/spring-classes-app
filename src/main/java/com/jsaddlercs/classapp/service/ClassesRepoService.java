@@ -3,6 +3,7 @@ package com.jsaddlercs.classapp.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import com.jsaddlercs.classapp.db.ClassesRepository;
@@ -11,7 +12,8 @@ import com.jsaddlercs.classapp.model.ClassesModel;
 import com.jsaddlercs.classapp.model.SyllabusLink;
 
 @Service
-public class ClassesRepoService {
+@Profile({"dev", "repo"})
+public class ClassesRepoService implements ClassesService {
 	public ClassesRepository classesRepo;
 	
 	public ClassesRepoService(ClassesRepository classesRepo) { 
@@ -42,6 +44,9 @@ public class ClassesRepoService {
 		}
 		return out;
 	}
+	public List<ClassesModel> getSENG2000Classes() {
+		return classesRepo.findAllByClassesName("SENG 2000");
+	}
 	
 	@SuppressWarnings("serial")
 	public static class CLAParamNotExistsException extends CLAException { 
@@ -50,7 +55,4 @@ public class ClassesRepoService {
 		}
 	}
 
-	public List<ClassesModel> getSENG2000Classes() {
-		return classesRepo.findAllByClassesName("SENG 2000");
-	}
 }
