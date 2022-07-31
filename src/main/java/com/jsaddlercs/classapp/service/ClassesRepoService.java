@@ -49,4 +49,8 @@ public class ClassesRepoService {
 			super(message);
 		}
 	}
+
+	public List<ClassesModel> getSENG2000Classes() {
+		return classesRepo.findAllByClassesName("SENG 2000");
+	}
 }

@@ -33,10 +33,15 @@ public class ClassesRestController {
 		return new ClassesResponse(classesService.getAllClasses());
 	}
 	
-	@GetMapping("/classes/{year}")
+	@GetMapping("/classes/byYear/{year}")
 	public ClassesResponse getClassesByYear(@PathVariable String year) { 
 		Integer check = classesService.checkYearInput(year);
 		return new ClassesResponse(classesService.getClassesByYear(check));
+	}
+	
+	@GetMapping("/classes/SENG2000")
+	public ClassesResponse getSENG2000Classes() { 
+		return new ClassesResponse(classesService.getSENG2000Classes());
 	}
 	
 }
