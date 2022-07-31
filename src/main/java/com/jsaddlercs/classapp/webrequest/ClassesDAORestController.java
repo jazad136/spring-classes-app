@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,6 +38,7 @@ public class ClassesDAORestController {
 //		Integer check = classesService.checkYearInput(year);
 //		return new ClassesResponse(classesService.getClassesByYear(check));
 //	}
+	
 	
 	@GetMapping("/classes/SENG2000")
 	public ClassesResponse getSENG2000Classes() { 

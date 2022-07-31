@@ -1,5 +1,6 @@
 package com.jsaddlercs.classapp.model;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
@@ -33,8 +34,15 @@ public class ClassesModel {
 	public List<String> getImageCaptions() { return imageCaptions; }
 	public void setImageCaptions(List<String> imageCaptions) { this.imageCaptions = imageCaptions; }
 	
-	public List<SyllabusLink> getSyllabusLinks() { return syllabusLinks; }
-	public void setSyllabusLinks(List<SyllabusLink> syllabusLinks) { this.syllabusLinks = syllabusLinks; }
+	/** 
+	 * This method cannot return a null value. When it is run it will return a 
+	 */
+	public List<SyllabusLink> getSyllabusLinks() { 
+		return syllabusLinks = (syllabusLinks == null ? new LinkedList<>() : syllabusLinks); 
+	}
+	public void setSyllabusLinks(List<SyllabusLink> syllabusLinks) { 
+		this.syllabusLinks = (syllabusLinks == null ? new LinkedList<>() : syllabusLinks);
+	}
 
 	public StatisticsType getStatistics() { return statistics; }
 	public void setStatistics(StatisticsType statistics) { this.statistics = statistics; }
