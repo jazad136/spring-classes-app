@@ -5,15 +5,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jsaddlercs.classapp.service.ClassesRepoService;
+import com.jsaddlercs.classapp.service.ClassesService;
 
 @Controller
 @RequestMapping()
 public class ClassesViewerController {
 	
-	private final ClassesRepoService classesService;
+	private final ClassesService classesService;
 	
-	public ClassesViewerController(ClassesRepoService service) { this.classesService = service; } 
+	public ClassesViewerController(ClassesService service) { this.classesService = service; } 
 	
 	
 	@GetMapping 
