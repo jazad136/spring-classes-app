@@ -1,30 +1,31 @@
 package com.jsaddlercs.classapp.webrequest;
 
+import java.util.List;
+
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jsaddlercs.classapp.model.ClassesModel;
 import com.jsaddlercs.classapp.response.ClassesResponse;
 import com.jsaddlercs.classapp.response.PingResponse;
-import com.jsaddlercs.classapp.service.ClassesDAOService;
 import com.jsaddlercs.classapp.service.ClassesRepoService;
-import com.jsaddlercs.classapp.service.ClassesService;
 
+@Profile({"dev","repo"})
 @RestController
-@RequestMapping(path="/api/base")
+@RequestMapping(path="/api")
 @CrossOrigin
-public class ClassesController {
-	private ClassesService classesService;
-
-	public ClassesController(ClassesService classesService) {
-		this.classesService = classesService;
-	}
+public class ClassesRepoRestController {
+	
+	private final ClassesRepoService classesService;
+	
+	public ClassesRepoRestController(ClassesRepoService service) { this.classesService = service; } 
+	
 	
 	@GetMapping(path="/ping")
 	@ResponseStatus(HttpStatus.OK)
@@ -36,24 +37,17 @@ public class ClassesController {
 	public ClassesResponse getAllClasses() { 
 		return new ClassesResponse(classesService.getAllClasses());
 	}
-		
+	
+	@GetMapping("/classes/byYear/{year}")
+	public ClassesResponse getClassesByYear(@PathVariable String year) { 
+		Integer check = classesService.checkYearInput(year);
+		return new ClassesResponse(classesService.getClassesByYear(check));
+	}
+	
 	@GetMapping("/classes/SENG2000")
 	public ClassesResponse getSENG2000Classes() { 
 		return new ClassesResponse(classesService.getSENG2000Classes());
 	}
 	
-	@Profile("dao")
-	@GetMapping("/classes/filter") 
-	public ClassesResponse getClassesByTopicQuery(@RequestParam(name="query") String queryInput) { 
-		ClassesDAOService daoS = (ClassesDAOService) classesService;
-		String query = daoS.checkQueryInput(queryInput);
-		return new ClassesResponse(daoS.getClassesByTopicQuery(query));
-	}
-	@Profile("repo")
-	@GetMapping("/classes/byYear/{year}")
-	public ClassesResponse getClassesByYear(@PathVariable Integer year) { 
-		ClassesRepoService repoS = (ClassesRepoService) classesService;
-		return new ClassesResponse(repoS.getClassesByYear(year));
-	}
 	
 }
