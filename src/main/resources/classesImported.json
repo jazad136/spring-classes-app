@@ -170,12 +170,13 @@
 				"dropped": 0,
 				"semesterHours": 3
 			},
-			"syllabusLinks":
+			"syllabusLinks": [
 				{
 					"link":"2021_SENG1020.pdf",
 					"offeringSeason": "Spring",
 					"offeringYear": "2021",
-					"topicExposure": { 
+					"topicExposure": 
+					{ 
 						"algorithms": [
 							"Sorting",
 							"Search",
@@ -201,6 +202,7 @@
 						]
 					}
 				}
+			]
 		}
 		
 	]
