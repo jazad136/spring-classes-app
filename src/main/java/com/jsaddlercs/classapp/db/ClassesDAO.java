@@ -56,7 +56,8 @@ public class ClassesDAO {
 		}
 		return testForMatch(lte.getAlgorithms(), topic) 
 			|| testForMatch(lte.getLanguages(), topic) 
-			|| testForMatch(lte.getLanguages(), topic);
+			|| testForMatch(lte.getDataStructures(), topic)
+			|| testForMatch(lte.getDevTools(), topic);
 	}
 	public static boolean testForMatch(List<String> inputList, String topic) { 
 		String searchTopic = topic.toLowerCase();

@@ -46,6 +46,9 @@ public class ClassesRestController {
 	@GetMapping("/classes/filter") 
 	public ClassesResponse getClassesByTopicQuery(@RequestParam(name="query") String queryInput) { 
 		ClassesDAOService daoS = (ClassesDAOService) classesService;
+		if(queryInput.isBlank()) { 
+			return new ClassesResponse(daoS.getAllClasses());
+		}
 		String query = daoS.checkQueryInput(queryInput);
 		return new ClassesResponse(daoS.getClassesByTopicQuery(query));
 	}

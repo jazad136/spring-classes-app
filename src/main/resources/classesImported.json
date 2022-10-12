@@ -23,7 +23,8 @@
 				"offeringYear": "2020",
 				"topicExposure": 
 					{ 
-						"algorithms": [ 		
+						"algorithms": [
+							"Algorithms",	
 							"Insertion Sort",
 							"Quicksort"
 						],
@@ -43,7 +44,8 @@
 				"offeringYear": "2021",
 				"topicExposure": 
 				    { 
-						"algorithms": [ 		
+						"algorithms": [ 	
+							"Algorithms",	
 							"Insertion Sort",
 							"Quicksort"
 						],
@@ -88,7 +90,10 @@
 				"offeringYear": "2020",
 				"topicExposure": 
 					{
+						"algorithms" : [],
 						"dataStructures": [
+							"software",
+							"foundations",
 							"objects",
 							"strings"
 						],
@@ -130,11 +135,15 @@
 				"offeringYear": "2020",
 				"topicExposure":
 					{
+						"algorithms": [],
+						
 						"dataStructures": [ 
-							"sets",
-							"collections",
-							"propositions"
+							"Discrete",
+							"Sets",
+							"Collections",
+							"Propositions"
 						],
+						"languages": [],
 						"devTools": [
 							"LaTeX"
 						]
@@ -178,6 +187,7 @@
 					"topicExposure": 
 					{ 
 						"algorithms": [
+							"Software",
 							"Sorting",
 							"Search",
 							"Recursion"
